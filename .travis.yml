@@ -1,0 +1,43 @@
+# Provenance Tool Suite interoperability tests
+#
+# This job assumes the following packages have been installed (these
+# are provided by the Travis CI build environment,
+# http://docs.travis-ci.com/user/ci-environment:
+#
+# git
+# curl
+# python 2.7 and 3.4
+# graphviz 
+# maven
+# openjdk-7-jdk
+
+language: python
+
+python:
+  - 2.7
+  - 3.4
+
+addons:
+  apt:
+    packages:
+    - graphviz
+    - rpm
+    - libxml2-utils
+    - zlib1g-dev
+    - libxslt1-dev
+
+env: 
+  matrix:
+  - COMPONENT=provpy
+  - COMPONENT=provtoolbox
+  - COMPONENT=provstore
+  - COMPONENT=provtranslator
+
+before_install:
+  - source get-test-harness.sh
+  - source setup-$COMPONENT.sh
+  - cd 
+  - cd interop-test-harness
+
+script: 
+  - nosetests -v prov_interop.interop_tests.test_$COMPONENT
