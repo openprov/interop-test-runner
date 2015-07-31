@@ -34,18 +34,9 @@ env:
   - COMPONENT=provtranslator
 
 before_install:
-  - pwd
-  - ls
   - source setup-test-harness.sh
-  - pwd
-  - ls
   - source setup-$COMPONENT.sh
-  - pwd
-  - ls
-  - cd 
-  - pwd
-  - ls
-  - cd interop-test-harness
+  - cd $TRAVIS_BUILD_DIR/interop-test-harness
 
 script: 
   - nosetests -v prov_interop.interop_tests.test_$COMPONENT
