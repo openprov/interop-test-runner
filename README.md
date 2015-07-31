@@ -2,10 +2,10 @@
 
 [Provenance Tool Suite](http://provenance.ecs.soton.ac.uk/) interoperability test harness jobs for [Travis CI](https://travis-ci.org/). The Travis CI job in this repository tests:
 
-* [ProvPy](https://github.com/trungdong/prov) interoperability test job.
-* [ProvToolbox](https://github.com/lucmoreau/ProvToolbox) interoperability test job.
-* [ProvStore](https://provenance.ecs.soton.ac.uk/store/) interoperability test job.
-* [ProvTranslator](https://provenance.ecs.soton.ac.uk/validator/view/translator.html) interoperability test job.
+* [ProvPy](https://github.com/trungdong/prov)
+* [ProvToolbox](https://github.com/lucmoreau/ProvToolbox)
+* [ProvStore](https://provenance.ecs.soton.ac.uk/store/)
+* [ProvTranslattor](https://provenance.ecs.soton.ac.uk/validator/view/translator.html)
 
 The job uses the Provenance Tool Suite:
 
