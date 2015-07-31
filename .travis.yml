@@ -28,10 +28,19 @@ addons:
 
 env: 
   matrix:
-  - COMPONENT=provpy
-  - COMPONENT=provtoolbox
-  - COMPONENT=provstore
-  - COMPONENT=provtranslator
+    - COMPONENT=provpy
+    - COMPONENT=provtoolbox
+    - COMPONENT=provstore
+    - COMPONENT=provtranslator
+
+matrix:
+  exclude:
+    - python: 3.4
+      COMPONENT=provtoolbox
+    - python: 3.4
+    - COMPONENT=provstore
+    - python: 3.4
+    - COMPONENT=provtranslator
 
 before_install:
   - source setup-test-harness.sh
