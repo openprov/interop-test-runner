@@ -34,7 +34,7 @@ env:
   - COMPONENT=provtranslator
 
 before_install:
-  - source get-test-harness.sh
+  - source setup-test-harness.sh
   - source setup-$COMPONENT.sh
   - cd 
   - cd interop-test-harness
