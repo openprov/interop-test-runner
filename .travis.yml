@@ -33,14 +33,18 @@ env:
     - COMPONENT=provstore
     - COMPONENT=provtranslator
 
+# As ProvPy library is used for ProvStore, ProvTranslator, ProvToolbox 
+# don't run tests under 3.4 for these components, as prov-compare is
+# not (yet) 3.4 compatible.
+
 matrix:
   exclude:
     - python: 3.4
-      COMPONENT=provtoolbox
+      env: COMPONENT=provtoolbox
     - python: 3.4
-    - COMPONENT=provstore
+      env: COMPONENT=provstore
     - python: 3.4
-    - COMPONENT=provtranslator
+      env: COMPONENT=provtranslator
 
 before_install:
   - source setup-test-harness.sh
